@@ -8,3 +8,13 @@ build/
 
 # Env
 .env
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+dist/
+build/
+
+# Env
+.env
