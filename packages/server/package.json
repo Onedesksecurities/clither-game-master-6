@@ -1,0 +1,23 @@
+{
+  "name": "slither-server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "shared": "1.0.0",
+    "@msgpack/msgpack": "^3.1.2",
+    "nanoid": "^5.1.5",
+    "ws": "^8.18.3",
+    "node-fetch":"^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "@types/ws": "^8.18.1",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
+  }
+}

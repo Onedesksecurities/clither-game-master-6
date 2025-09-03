@@ -1,0 +1,22 @@
+{
+  "name": "slither-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:client": "npm run dev --workspace=packages/client",
+    "build:client": "npm run build --workspace=packages/client",
+    "dev:server": "npm run dev --workspace=packages/server",
+    "start:tester": "npm start --workspace=packages/tester",
+    "dev:server:run": "npm run dev --workspace=packages/server",
+    "dev:shared:watch": "npm run watch --workspace=packages/shared"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.2.0"
+  },
+  "dependencies": {
+    "@pixi/layout": "^3.1.0"
+  }
+}

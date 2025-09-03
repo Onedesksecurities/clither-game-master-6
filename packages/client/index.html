@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LoopHero.io</title>
+    <link rel="stylesheet" href="./style/menu.css">
+</head>
+
+<body>
+    <div id="app"></div>
+    <div id="home-btn" class="hidden">
+        <img src="./assets/res/ic_home.svg" alt="Home">
+    </div>
+
+    <div id="orientation-warning" style="display: none;">
+        <div class="game-title">LoopHero.io</div>
+        <p class="warning-text">Please go to full screen and landscape mode to play the game</p>
+        <button id="enter-game-btn" class="play-button">Enter Game</button>
+    </div>
+
+    <div id="menu-screen">
+        <div class="menu-column left-column">
+            <!-- <div class="play-tips-title">Play tips</div>
+            <div class="tips-container">
+                <p class="tip-item">PC: steer with mouse; hold Enter 4s to cash out.</p>
+                <p class="tip-item">Mobile: drag to steer; hold Cash Out 4s (bottom-right).</p>
+                <p class="tip-item">On joining, you spawn safely with 5s invisibility.</p>
+                <p class="tip-item">In Classic Battle, enter an amount 0.005—1.0 Sol</p>
+                <p class="tip-item">The arena size changes with total snake length—small with few, big with many.</p>
+                <p class="tip-item">Cash Out only works if you're not encircled and your 4s ring isn't touched.</p>
+                <p class="tip-item">Higher amount → bigger starting snake.</p>
+            </div> 
+            <div class="how-to-play">
+                <span class="how-to-play-text">How to play & Rules</span>
+                <img src="./assets/res/ic_link.svg" alt="Link" class="link-icon">
+            </div>-->
+        </div>
+
+        <div class="menu-column middle-column">
+            <div class="game-title">LoopHero.io</div>
+            <input type="text" id="username-input" class="username-input" placeholder="Enter username">
+            <button id="play-button" class="play-button">Play classic</button>
+            <!-- <p class="minimum-text">*Minimum 0.005 SOL Required</p> -->
+        </div>
+
+        <div class="menu-column right-column">
+            <div class="controls-container">
+                <div id="sound-control" class="control-item">
+                    <span class="control-text">Sound</span>
+                    <div id="sound-icon-container" class="control-icon-container">
+                        <img id="sound-icon" src="./assets/res/ic_sound.svg" alt="Sound" class="control-icon">
+                    </div>
+                </div>
+
+                <div id="music-control" class="control-item">
+                    <span class="control-text">Music</span>
+                    <div id="music-icon-container" class="control-icon-container">
+                        <img id="music-icon" src="./assets/res/ic_music.svg" alt="Music" class="control-icon">
+                    </div>
+                </div>
+
+                <div id="control-mode" class="control-item">
+                    <span class="control-text">Control</span>
+                    <div class="control-with-hint">
+                        <div class="control-icon-container">
+                            <img id="control-icon" src="./assets/res/ic_pointer.svg" alt="Control" class="control-icon">
+                        </div>
+                        <span id="control-title" class="control-title">Pointer</span>
+                        <span id="control-hint" class="control-hint">Recommended<br>for PC</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-icons">
+                <div class="social-icon">
+                    <img src="./assets/res/ic_X_white.svg" alt="Twitter">
+                </div>
+                <div class="social-icon">
+                    <img src="./assets/res/ic_telegram.svg" alt="Telegram">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./src/main.ts"></script>
+    <script src="./src/menu.js"></script>
+
+    <div id="classic-battle-modal" class="modal hidden">
+        <div class="modal-container">
+            <div class="modal-content">
+
+                <h2 class="modal-title">Classic Battle</h2>
+                <p class="modal-subtitle">Start your snake with more length</p>
+                <input value="0.005" type="text" id="amount-input" class="amount-input"
+                    placeholder="Enter an amount in between 0.005 - 1 Sol">
+                <div class="amount-buttons">
+                    <button class="amount-btn" data-amount="0.005">0.005</button>
+                    <button class="amount-btn" data-amount="0.01">0.01</button>
+                    <button class="amount-btn" data-amount="0.1">0.1</button>
+                    <button class="amount-btn" data-amount="0.5">0.5</button>
+                    <button class="amount-btn" data-amount="1">1</button>
+                </div>
+                <div class="snake-length">
+                    <span class="snake-length-text">Initial snake length = <span id="length-value">0</span></span>
+                    <div class="snake-visual">
+                        <div class="snake-head">
+                            <div class="snake-eye"></div>
+                            <div class="snake-eye"></div>
+                        </div>
+                        <div class="snake-body" id="snake-body"></div>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button id="go-back-btn" class="go-back-btn">GO BACK</button>
+                    <button id="top-up-play-btn" class="top-up-btn">TOP UP AND PLAY</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

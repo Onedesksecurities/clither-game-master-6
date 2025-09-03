@@ -1,0 +1,23 @@
+{
+  "name": "slither-client",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "shared": "1.0.0",
+    "@msgpack/msgpack": "^3.1.2",
+    "@pixi/filter-drop-shadow": "^5.2.0",
+    "@timohausmann/quadtree-ts": "^2.2.2",
+    "pixi-filters": "^5.2.1",
+    "pixi.js": "^7.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "typescript": "^5.9.2",
+    "vite": "^5.0.0"
+  }
+}
